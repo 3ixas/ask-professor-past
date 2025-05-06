@@ -20,7 +20,7 @@
             <button type="submit">Ask</button>
         </form>
 
-        <p id="loading" class="hidden">Professor is pondering your question...</p>
+        <p id="loading" class="hidden">Professor is pondering your question...🧠⏳</p>
         <p id="error" class="hidden"></p>
     </div>
 
@@ -62,8 +62,17 @@
 
         function appendMessage(sender, message) {
             const el = document.createElement("div");
-            el.classList.add("message");
-            el.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            el.classList.add("message", sender === "You" ? "user-msg" : "prof-msg");
+            
+            el.innerHTML = sender === "You"
+                ? `<div class="bubble user"><strong>${sender}:</strong> ${message}</div>`
+                : `<div class="bubble professor">
+                    <img src="{% static 'core/professor-past.png' %}" class="avatar" />
+                    <div>
+                        <strong>${sender}:</strong> ${message}
+                    </div>
+                </div>`;
+
             chatBox.appendChild(el);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
