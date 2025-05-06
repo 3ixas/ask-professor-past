@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json
@@ -28,3 +29,6 @@ def ask_professor(request):
     except Exception as e:
         print(f"Error in /ask: {e}")
         return JsonResponse({"error": "Internal server error."}, status=500)
+
+def chat_view(request):
+    return render(request, "core/chat.html")
