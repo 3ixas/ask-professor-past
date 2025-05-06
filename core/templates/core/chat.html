@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <title>Ask Professor Past</title>
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
 </head>
+
 <body>
     <div class="container">
         <h1>Ask Professor Past 👨‍🏫</h1>
@@ -24,7 +26,8 @@
         const form = document.getElementById("chat-form");
         const input = document.getElementById("user-input");
         const chatBox = document.getElementById("chat-box");
-        const loading = document.getElementById("error");
+        const loading = document.getElementById("loading");
+        const error = document.getElementById("error");
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -41,7 +44,7 @@
                 const res = await fetch("/ask/", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body JSON.stringify({ question: userMsg })
+                    body: JSON.stringify({ question: userMsg })
                 });
 
                 const data = await res.json();
