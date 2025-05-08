@@ -18,6 +18,7 @@
         <form id="chat-form">
             <input type="text" id="user-input" placeholder="Ask a history question..." required />
             <button type="submit">Ask</button>
+            <button type="button" id="clear-chat">Clear</button>
         </form>
 
         <p id="loading" class="hidden">Professor is pondering your question...🧠⏳</p>
@@ -25,6 +26,9 @@
     </div>
 
     <script>
+
+        loadMessages();
+
         const form = document.getElementById("chat-form");
         const input = document.getElementById("user-input");
         const chatBox = document.getElementById("chat-box");
@@ -75,7 +79,26 @@
 
             chatBox.appendChild(el);
             chatBox.scrollTop = chatBox.scrollHeight;
+
+            saveMessage({ sender, message });
         }
+
+        function saveMessage(entry) {
+            const messages = JSON.parse(localStorage.getItem("chatHistory") || "[]");
+            messages.push(entry);
+            localStorage.setItem("chatHistory", JSON.stringify(messages));
+        }
+
+        function loadMessages() {
+            const messages = JSON.parse(localStorage.getItem("chatHistory") || "[]");
+            messages.forEach(({ sender, message }) => appendMessage(sender, message));
+        }
+
+        document.getElementById("clear-chat").addEventListener("click", () => {
+            localStorage.removeItem("chatHistory");
+            chatBox.innerHTML = "";
+        });
+
     </script>
 </body>
 </html>
