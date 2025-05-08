@@ -97,3 +97,17 @@ button:hover {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+#export-chat {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#export-chat:hover {
+  background: #222;
+}

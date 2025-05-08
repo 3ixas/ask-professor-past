@@ -110,6 +110,28 @@
             chatBox.innerHTML = "";
         });
 
+        document.getElementById("export-chat").addEventListener("click", () => {
+            const messages = JSON.parse(localStorage.getItem("chatHistory") || "[]");
+
+            if (!messages.length) {
+                alert("No chat history to export.");
+                return;
+            }
+
+            const md = messages
+                .map(({ sender, message }) => `**${sender}:** ${message}`)
+                .join("\n\n");
+
+            const blob = new Blob([md], { type: "text/markdown" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `professor-past-${new Date().toISOString().slice(0, 10)}.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
     </script>
 </body>
 </html>
