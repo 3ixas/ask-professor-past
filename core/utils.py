@@ -22,4 +22,4 @@ def generate_response(user_input: str, history=None) -> str:
 
     except Exception as e:
         print(f"OpenAI API Error: {e}")
-        return "Hmm... Professor Past is momentarily unavailable. Please try again soon!"
+        return "Hmm...Professor Past is momentarily unavailable. Please try again soon!"

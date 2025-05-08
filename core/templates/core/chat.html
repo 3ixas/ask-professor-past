@@ -47,14 +47,24 @@
             error.classList.add("hidden");
 
             try {
+                const history = JSON.parse(localStorage.getItem("chatHistory") || "[]")
+                    .slice(-6)
+                    .map(({ sender, message }) => ({
+                        role: sender === "You" ? "user" : "assistant",
+                        content: message
+                    }));
+
                 const res = await fetch("/ask/", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ question: userMsg })
+                    body: JSON.stringify({
+                        question: userMsg,
+                        history: history
+                    })
                 });
 
                 const data = await res.json();
-                appendMessage("Professor Past", data.reply || "Hmm...something went wrong.");
+                appendMessage("Professor Past", data.reply || "Hmm... Something went wrong.");
 
             } catch (err) {
                 error.textContent = "Something went wrong. Please try again.";
