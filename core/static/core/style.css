@@ -35,10 +35,8 @@ h1 {
 }
 
 .message {
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    animation: fadeIn 0.4s ease-in-out;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.3s ease;
 }
 
 form {
@@ -71,22 +69,22 @@ button:hover {
 }
 
 .bubble {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding: 0.75rem;
+  background: #fef6e4;
+  padding: 1rem;
   border-radius: 12px;
   max-width: 90%;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .user-msg .bubble {
-  background: #d4f1f4;
+  background: #d0f0fd;
   align-self: flex-end;
   border-bottom-right-radius: 0;
 }
 
 .prof-msg .bubble {
-  background: #fdf6e4;
+  background: #fef6e4;
   align-self: flex-start;
   border-bottom-left-radius: 0;
 }
