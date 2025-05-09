@@ -106,6 +106,12 @@ button:hover {
   border-bottom-left-radius: 0;
 }
 
+.professor-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .avatar {
   width: 100px;
   height: 100px;

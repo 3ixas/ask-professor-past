@@ -84,11 +84,9 @@
             
             el.innerHTML = sender === "You"
                 ? `<div class="bubble user"><strong>${sender}:</strong> ${message}</div>`
-                : `<div class="bubble professor">
-                    <div class="professor-layout">
-                        <img src="{% static 'core/professor-past.png' %}" class="avatar" />
-                        <div><strong>${sender}:</strong> ${message}</div>
-                    </div>
+                : `<div class="bubble professor-bubble">
+                    <img src="{% static 'core/professor.png' %}" class="avatar" />
+                    <div><strong>${sender}:</strong> ${message}</div>
                 </div>`;
 
             chatBox.appendChild(el);
