@@ -40,32 +40,37 @@ h1 {
 }
 
 form {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
 }
 
-input {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 button {
-    padding: 0.5rem 1rem;
-    background: #006699;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0077cc;
+  color: white;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background: #004466;
+  background: #005fa3;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .bubble {
@@ -109,13 +114,7 @@ button:hover {
 }
 
 #export-chat {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
   background: #444;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 #export-chat:hover {
