@@ -28,8 +28,6 @@
 
     <script>
 
-        loadMessages();
-
         const form = document.getElementById("chat-form");
         const input = document.getElementById("user-input");
         const chatBox = document.getElementById("chat-box");
@@ -104,6 +102,8 @@
             const messages = JSON.parse(localStorage.getItem("chatHistory") || "[]");
             messages.forEach(({ sender, message }) => appendMessage(sender, message));
         }
+
+        loadMessages();
 
         document.getElementById("clear-chat").addEventListener("click", () => {
             localStorage.removeItem("chatHistory");
