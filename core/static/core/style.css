@@ -94,6 +94,11 @@ button:hover {
   font-size: 1rem;
 }
 
+.user-msg {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .user-msg .bubble {
   background: #d0f0fd;
   align-self: flex-end;
