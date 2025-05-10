@@ -80,6 +80,10 @@
             }
         });
 
+        function formatQuotes(text) {
+            return text.replace(/"([^"]+)"/g, '<span class="quote">"$1"</span>');
+        }
+
         function appendMessage(sender, message) {
             const el = document.createElement("div");
             el.classList.add("message", sender === "You" ? "user-msg" : "prof-msg");
@@ -90,7 +94,7 @@
                 </div>`
                 : `<div class="bubble professor-bubble">
                     <img src="{% static 'core/professor-past.png' %}" class="avatar" />
-                    <div><strong>${sender}:</strong> ${message}</div>
+                    <div><strong>${sender}:</strong> ${formatQuotes(message)}</div>
                 </div>`;
 
             chatBox.appendChild(el);
