@@ -11,15 +11,31 @@ body {
   background: white;
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d5c7a3;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   min-height: 80vh;
+  max-height: 80vh;
 }
 
 .hero {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-family: 'Georgia', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2e2e2e;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
 }
 
 .hero h1 {
@@ -38,7 +54,7 @@ body {
 .chat-box {
   flex-grow: 1;
   overflow-y: auto;
-  border: 1px solid #ddd;
+  border: 2px solid #e6d8b6;
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -143,4 +159,23 @@ button:hover {
 
 #export-chat:hover {
   background: #222;
+}
+
+#loading {
+  font-style: italic;
+  color: #666;
+  padding: 0.5rem 1rem;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.quote {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ccc;
 }

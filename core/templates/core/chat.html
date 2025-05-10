@@ -8,6 +8,8 @@
     <title>Ask Professor Past</title>
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'core/professor-past-favicon.ico' %}" type="image/x-icon">
 </head>
 
 <body>
@@ -83,7 +85,9 @@
             el.classList.add("message", sender === "You" ? "user-msg" : "prof-msg");
             
             el.innerHTML = sender === "You"
-                ? `<div class="bubble user"><strong>${sender}:</strong> ${message}</div>`
+                ? `<div class="user-bubble-wrapper">
+                    <div class="bubble user"><strong>${sender}:</strong> ${message}</div>
+                </div>`
                 : `<div class="bubble professor-bubble">
                     <img src="{% static 'core/professor-past.png' %}" class="avatar" />
                     <div><strong>${sender}:</strong> ${message}</div>
