@@ -8,6 +8,7 @@ venv/
 *.log
 *.pot
 *.pyc
+/staticfiles/
 
 # Env
 .env
