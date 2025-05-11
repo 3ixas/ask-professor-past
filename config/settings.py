@@ -32,7 +32,9 @@ SECRET_KEY = 'django-insecure-699%8h4(5p46il=)*zdw-k+lhpi==3uuq-^%h9(rt9=(uelit5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = false
 
-ALLOWED_HOSTS = []
+import os
+
+ALLOWED_HOSTS = [os.environ.get('RAILWAY_STATIC_URL', '*')]
 
 
 # Application definition
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,3 +139,6 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
