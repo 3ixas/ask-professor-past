@@ -2,7 +2,7 @@
 
 > *An AI-powered history chatbot with charm, wit, and scholarly wisdom.*
 
-![Screenshot](static/core/Professor-Past-screenshot.png)
+<img width="984" alt="Image" src="https://github.com/user-attachments/assets/0d19cfda-a6e5-43d7-919d-c58065f42e17" />
 
 ---
 
