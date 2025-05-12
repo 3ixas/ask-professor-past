@@ -52,12 +52,13 @@ function appendMessage(sender, message) {
     const el = document.createElement("div");
     el.classList.add("message", sender === "You" ? "user-msg" : "prof-msg");
     
-    el.innerHTML = sender === "You"
-        ? `<div class="user-bubble-wrapper">
+    el.innerHTML =
+        sender === "You"
+            ? `<div class="user-bubble-wrapper">
             <div class="bubble user"><strong>${sender}:</strong> ${message}</div>
         </div>`
-        : `<div class="bubble professor-bubble">
-            <img src="${avatarUrl}" class="avatar" />
+            : `<div class="bubble professor-bubble">
+            <img src="${avatarUrl}" class="avatar" loading="lazy" />
             <div><strong>${sender}:</strong> ${formatQuotes(message)}</div>
         </div>`;
 
