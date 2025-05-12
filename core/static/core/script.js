@@ -3,6 +3,7 @@ const input = document.getElementById("user-input");
 const chatBox = document.getElementById("chat-box");
 const loading = document.getElementById("loading");
 const error = document.getElementById("error");
+const avatarUrl = document.getElementById("config").dataset.avatarUrl;
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -56,7 +57,7 @@ function appendMessage(sender, message) {
             <div class="bubble user"><strong>${sender}:</strong> ${message}</div>
         </div>`
         : `<div class="bubble professor-bubble">
-            <img src="{% static 'core/professor-past.png' %}" class="avatar" />
+            <img src="${avatarUrl}" class="avatar" />
             <div><strong>${sender}:</strong> ${formatQuotes(message)}</div>
         </div>`;
 
