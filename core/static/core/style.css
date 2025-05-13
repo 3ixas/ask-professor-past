@@ -113,6 +113,7 @@ button:hover {
 .user-msg {
   display: flex;
   justify-content: flex-end;
+  gap: 1rem;
 }
 
 .user-msg .bubble {
@@ -206,13 +207,13 @@ button:hover {
     flex-grow: 1;
     max-height: unset;
     overflow-y: auto;
-    max-height: 50vh;
+    max-height: 75vh;
     min-height: 200px;
     box-sizing: border-box;
   }
 
   .chat-status {
-    min-height: 1.5rem;
+    min-height: 1rem;
     font-style: italic;
     margin: 1rem 0;
     /* margin-top: 1rem;
