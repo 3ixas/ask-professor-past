@@ -187,7 +187,7 @@ button:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     padding: 1rem;
     box-sizing: border-box;
   }
@@ -228,5 +228,9 @@ button:hover {
 
   form {
     margin-top: auto;
+  }
+
+  #chat-form {
+    margin-top: 1rem;
   }
 }
