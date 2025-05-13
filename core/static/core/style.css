@@ -185,7 +185,7 @@ button:hover {
 @media (max-width: 600px) {
   .container {
     min-height: 100vh;
-    max-height: 100vh;
+    max-height: none;
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -205,7 +205,9 @@ button:hover {
     position: relative; */
     flex-grow: 1;
     max-height: unset;
-    min-height: 50vh;
+    overflow-y: auto;
+    max-height: 50vh;
+    min-height: 200px;
     box-sizing: border-box;
   }
 
