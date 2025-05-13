@@ -185,6 +185,7 @@ button:hover {
 @media (max-width: 600px) {
   .container {
     min-height: 100vh;
+    max-height: none;
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -251,7 +252,7 @@ button:hover {
 
   #chat-form {
     margin-top: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 2.5rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
