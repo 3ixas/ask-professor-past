@@ -188,16 +188,20 @@ button:hover {
     display: flex;
     flex-direction: column;
     padding-bottom: 5rem;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .chat-box {
-    width: 92vw;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     flex-grow: 1;
     max-height: unset;
     min-height: 50vh;
+    box-sizing: border-box;
   }
 
   .bubble {
