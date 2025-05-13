@@ -207,7 +207,7 @@ button:hover {
     flex-grow: 1;
     max-height: unset;
     overflow-y: auto;
-    max-height: 75vh;
+    max-height: 50vh;
     min-height: 200px;
     box-sizing: border-box;
   }
@@ -215,7 +215,7 @@ button:hover {
   .chat-status {
     min-height: 1rem;
     font-style: italic;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     /* margin-top: 1rem;
     margin-bottom: 1rem; */
     font-size: 0.95rem;
