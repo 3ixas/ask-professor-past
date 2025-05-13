@@ -199,17 +199,31 @@ button:hover {
     margin-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    padding-bottom: 5rem;
+    position: relative;
     flex-grow: 1;
     max-height: unset;
     min-height: 50vh;
     box-sizing: border-box;
   }
 
-  .chat-status {
+  /* .chat-status {
     min-height: 1.5rem;
     font-style: italic;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
+  } */
+
+  #loading {
+    position: absolute;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  #loading.hidden {
+    display: none;
   }
 
   .bubble {
