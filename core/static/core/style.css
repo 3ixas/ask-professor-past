@@ -220,7 +220,7 @@ button:hover {
     transform: translateX(-50%);
     font-style: italic;
     font-size: 0.9rem;
-    text-align: left;
+    left: 50%;
   }
 
   #loading.hidden {
