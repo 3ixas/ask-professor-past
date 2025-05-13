@@ -196,7 +196,7 @@ button:hover {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     flex-grow: 1;
@@ -206,9 +206,10 @@ button:hover {
   }
 
   .chat-status {
-    height: 1.5rem;
+    min-height: 1.5rem;
     font-style: italic;
     margin-bottom: 0.5rem;
+    font-size: 0.95rem;
   }
 
   .bubble {
