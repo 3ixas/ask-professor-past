@@ -210,7 +210,8 @@ button:hover {
   .chat-status {
     min-height: 1.5rem;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin: 0.75rem 0;
+    margin-bottom: 1rem;
     font-size: 0.9rem;
   }
 
@@ -247,6 +248,21 @@ button:hover {
   }
 
   #chat-form {
-    margin-top: 1rem;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  #chat-form input[type="text"] {
+    flex: 1 1 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #chat-form button {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 45%;
   }
 }
