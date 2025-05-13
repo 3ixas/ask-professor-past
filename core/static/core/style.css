@@ -181,9 +181,18 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   .chat-box {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    flex-grow: 1;
+    max-height: unset;
+    min-height: 50vh;
   }
 
   .bubble {
@@ -199,5 +208,9 @@ button:hover {
   .avatar {
     width: 64px;
     height: 64px;
+  }
+
+  form {
+    margin-top: auto;
   }
 }
