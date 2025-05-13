@@ -187,7 +187,7 @@ button:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 6rem;
+    padding-bottom: 7rem;
     padding: 1rem;
     box-sizing: border-box;
   }
@@ -196,23 +196,25 @@ button:hover {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 0.5rem;
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem; */
     /* padding-bottom: 5rem;
     position: relative; */
     flex-grow: 1;
-    max-height: unset;
+    /* max-height: unset; */
     min-height: 50vh;
     box-sizing: border-box;
   }
 
   .chat-status {
-    min-height: 1.5rem;
+    /* min-height: 1.5rem; */
     font-style: italic;
-    margin: 0.75rem 0;
+    /* margin: 0.75rem 0; */
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   /* #loading {
@@ -253,16 +255,24 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    padding-bottom: 1rem;
   }
 
   #chat-form input[type="text"] {
     flex: 1 1 100%;
     width: 100%;
     box-sizing: border-box;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
   }
 
   #chat-form button {
     flex: 1 1 calc(50% - 0.25rem);
     min-width: 45%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
   }
 }
